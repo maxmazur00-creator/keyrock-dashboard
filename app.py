@@ -151,18 +151,3 @@ elif page == "Stablecoin Rates":
 
 st.sidebar.markdown("---")
 st.sidebar.caption(f"Updated: {datetime.now().strftime('%H:%M:%S')}")
-```
-
-### Step 6: Paste the Code Above
-
-### Step 7: Scroll Down, Click "Commit changes"
-
----
-
-## 📝 Also Check `requirements.txt`:
-
-Make sure it ONLY has:
-```
-streamlit
-plotly
-pandas
