@@ -11,7 +11,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Sidebar
 with st.sidebar:
     st.title("📊 Keyrock 2026")
     st.caption("12 Charts to Watch")
@@ -31,7 +30,6 @@ with st.sidebar:
         "Stablecoin Rates"
     ])
 
-# Helper function
 def make_chart(days=90):
     dates = pd.date_range(end=datetime.now(), periods=days, freq='D')
     values = [100 + i * 2 for i in range(days)]
@@ -43,7 +41,6 @@ def make_chart(days=90):
     fig.update_layout(template="plotly_dark", height=400)
     return fig
 
-# Main content
 if page == "Home":
     st.title("🏠 Dashboard Overview")
     st.caption("Real-time monitoring of 12 key crypto metrics")
@@ -156,27 +153,16 @@ st.sidebar.markdown("---")
 st.sidebar.caption(f"Updated: {datetime.now().strftime('%H:%M:%S')}")
 ```
 
-**Then scroll down and click "Commit changes"**
+### Step 6: Paste the Code Above
+
+### Step 7: Scroll Down, Click "Commit changes"
 
 ---
 
-### 2️⃣ Replace `requirements.txt`
+## 📝 Also Check `requirements.txt`:
 
-**Go to GitHub → Click `requirements.txt` → Click pencil ✏️ → Delete all → Paste this:**
+Make sure it ONLY has:
 ```
 streamlit
 plotly
 pandas
-```
-
-**Just these 3 lines! Nothing else.**
-
-**Click "Commit changes"**
-
----
-
-## ⏱️ Wait 2-3 Minutes
-
-Streamlit will auto-redeploy. You'll see:
-```
-🔄 Rerunning with updated code...
